@@ -1,0 +1,62 @@
+<%-include ("partials/top") %>
+<div class="row space">
+  <div class="col-12">
+    <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
+      <h4 class="page-title">Add Land Information</h4>
+    </div>
+  </div> 
+</div>
+
+<div class="row">
+<div class="col-12">
+
+<form action="/land-details/new" method="POST" class="card">
+
+  <fieldset class="row card-body">
+    <legend>Land Details</legend>
+    <div class="form-group col-md-4">
+      <label>Govt. Issued Reg. Number: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="land_reg_no" placeholder="ABS/.../.." />
+    </div>
+    <div class="form-group col-md-3">
+      <label>Plot Number: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="plot_number" />
+    </div>
+    <div class="form-group col-md-5">
+      <label>Location: <strong class="text-danger">*</strong></label>
+      <textarea required type="text" class="form-control" name="location"></textarea>
+    </div>
+    <div class="form-group col-md-4">
+      <label>Plot Size: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="plot_size" />
+    </div>
+    <div class="form-group col-md-8">
+      <label>Name of Owner: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="owner_name" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>C. of O. Registration Number: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="c_of_o_reg_no" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Survey Plan Registration Number: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="survey_plan_reg_no" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Land Use Purpose: <strong class="text-danger">*</strong></label>
+      <textarea type="text" class="form-control" name="land_use_purpose"></textarea>
+    </div>
+  </fieldset>
+  
+  <div class="form-group mt-2">
+    <button class="btn btn-primary form-control" type="submit">Submit</button>
+  </div>
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+<%-include ("partials/bottom") %>

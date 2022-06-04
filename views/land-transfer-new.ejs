@@ -1,0 +1,57 @@
+<%-include ("partials/top") %>
+<div class="row space">
+  <div class="col-12">
+    <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
+      <h4 class="page-title">Record Land Transfer</h4>
+    </div>
+  </div> 
+</div>
+
+<div class="row">
+<div class="col-12">
+
+<form action="/land-transfers/new" method="POST" class="card">
+
+  <fieldset class="row card-body">
+    <legend>Transfer Details</legend>
+    <div class="form-group col-md-4">
+      <label>Land's Govt. Issued No.: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="land_reg_no" />
+    </div>
+    <div class="form-group col-md-6">
+      <label>Assignor (Previous Owner) Name: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="prev_owner_name" />
+    </div>
+    <div class="form-group col-md-6">
+      <label>Assignee (New Owner) Name: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="new_owner_name" />
+    </div>
+    <div class="form-group col-md-3">
+      <label>Size of Portion Transferred: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="size_of_transferred_land" />
+    </div>
+    <div class="form-group col-md-3">
+      <label>Date of Transfer: <strong class="text-danger">*</strong></label>
+      <input type="date" class="form-control" name="date_of_transfer" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Witnesses for Assignor: <strong class="text-danger">*</strong></label>
+      <textarea type="text" class="form-control" name="prev_owner_witnessess"></textarea>
+    </div>
+    <div class="form-group col-md-4">
+      <label>Witnesses for Assignee: <strong class="text-danger">*</strong></label>
+      <textarea type="text" class="form-control" name="new_owner_witnessess"></textarea>
+    </div>
+    
+  </fieldset>
+  
+  <div class="form-group mt-2">
+    <button class="btn btn-primary form-control" type="submit">Submit</button>
+  </div>
+</form>
+
+</div>
+
+</div>
+
+<%-include ("partials/bottom") %>

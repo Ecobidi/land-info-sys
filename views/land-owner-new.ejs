@@ -1,0 +1,55 @@
+<%-include ("partials/top") %>
+<div class="row space">
+  <div class="col-12">
+    <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
+      <h4 class="page-title">Add Land Owner</h4>
+    </div>
+  </div> 
+</div>
+
+<div class="row pb-2">
+<div class="col-12">
+
+<form action="/land-owners/new" method="POST" class="card">
+
+  <fieldset class="row card-body">
+    <div class="form-group col-md-4">
+      <label>Surname: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="surname" />
+    </div>
+    <div class="form-group col-md-8">
+      <label>Other Names: <strong class="text-danger">*</strong></label>
+      <input required type="text" class="form-control" name="other_names" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Gender: <strong class="text-info">*</strong></label>
+      <select class="form-control" name="gender" required>
+        <option value="">--Select Gender--</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label>Phone Number: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="phone" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Occupation: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="occupation" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Home Address: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="home_address" />
+    </div>
+    <div class="form-group col-md-4">
+      <label>Office Address: <strong class="text-danger">*</strong></label>
+      <input type="text" class="form-control" name="office_address" />
+    </div>
+  </fieldset>
+  
+  <div class="form-group mt-4">
+    <button class="btn btn-primary form-control" type="submit">Submit</button>
+  </div>
+</form>
+
+<%-include ("partials/bottom") %>
